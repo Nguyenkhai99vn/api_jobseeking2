@@ -79,7 +79,7 @@ class RecruiterController extends Controller
                 $path =public_path() . '/assets/Avatar';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;  // đổi đường dẫn http://127.0.0.1:8000
+                $data->Avatar ='https://apijob2.herokuapp.com/assets/Avatar/'. $name;  // đổi đường dẫn http://127.0.0.1:8000
             }
             if($request->hasFile('Cover')){
                 $image = $request->file('Cover');
@@ -88,7 +88,7 @@ class RecruiterController extends Controller
                 $path =public_path() . '/assets/Cover';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Cover ='http://127.0.0.1:8000/assets/Cover/'.$name;
+                $data->Cover ='https://apijob2.herokuapp.com/assets/Cover/'.$name;
             }
             $data->save();
             DB::commit();
@@ -176,7 +176,7 @@ class RecruiterController extends Controller
                 $path =public_path() . '/assets/Avatar';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;
+                $data->Avatar ='https://apijob2.herokuapp.com/assets/Avatar/'. $name;
             }
             if($request->hasFile('Cover')){
                 $image = $request->file('Cover');
@@ -185,7 +185,7 @@ class RecruiterController extends Controller
                 $path =public_path() . '/assets/Cover';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Cover ='http://127.0.0.1:8000/assets/Cover/'.$name;
+                $data->Cover ='https://apijob2.herokuapp.com/assets/Cover/'.$name;
             }
 //            die($data);
 
