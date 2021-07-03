@@ -87,7 +87,7 @@ class ApplicantsController extends Controller
                 $filename= time().'.'.$request->file('CV')->extension();
                 $path=public_path() . '/assets/fileCV';
                 $file->move($path,$filename);
-                $data->CV = 'http://127.0.0.1:8000/assets/fileCV/'.$filename;
+                $data->CV = 'https://apijob2.herokuapp.com/assets/fileCV/'.$filename;
             }
 //image
             if($request->hasFile('Avatar')){
@@ -97,7 +97,7 @@ class ApplicantsController extends Controller
                 $path =public_path() . '/assets/Avatar';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;
+                $data->Avatar ='https://apijob2.herokuapp.com/assets/Avatar/'. $name;
             }
             if($request->hasFile('Cover')){
                 $image = $request->file('Cover');
@@ -106,7 +106,7 @@ class ApplicantsController extends Controller
                 $path =public_path() . '/assets/Cover';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Cover ='http://127.0.0.1:8000/assets/Cover/'.$name;
+                $data->Cover ='https://apijob2.herokuapp.com/assets/Cover/'.$name;
             }
             $data->save();
             DB::commit();
@@ -187,7 +187,7 @@ class ApplicantsController extends Controller
                 $filename= time().'.'.$request->file('CV')->extension();
                 $path=public_path() . '/assets/fileCV';
                 $file->move($path,$filename);
-                $data->CV = 'http://127.0.0.1:8000/assets/fileCV/'.$filename;
+                $data->CV = 'https://apijob2.herokuapp.com/assets/fileCV/'.$filename;
             }
 //image
             if($request->hasFile('Avatar')){
@@ -197,7 +197,7 @@ class ApplicantsController extends Controller
                 $path =public_path() . '/assets/Avatar';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;
+                $data->Avatar ='https://apijob2.herokuapp.com/assets/Avatar/'. $name;
             }
             if($request->hasFile('Cover')){
                 $image = $request->file('Cover');
@@ -206,7 +206,7 @@ class ApplicantsController extends Controller
                 $path =public_path() . '/assets/Cover';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Cover ='http://127.0.0.1:8000/assets/Cover/'.$name;
+                $data->Cover ='https://apijob2.herokuapp.com/assets/Cover/'.$name;
             }
             $data->save();
             DB::commit();
