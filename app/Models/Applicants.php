@@ -37,4 +37,7 @@ class Applicants extends Model
     public function Rank(){
         return $this->belongsTo(Rank::class,'ID_Rank');
     }
+    public function Account(){
+        return $this->belongsTo(Account::class,'Email');
+    }
 }

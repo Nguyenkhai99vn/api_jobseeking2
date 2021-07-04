@@ -21,4 +21,8 @@ class Recruiter extends Model
         'Avatar',
         'Cover'
     ];
+
+    public function Account(){
+        return $this->belongsTo(Account::class,'Email');
+    }
 }
