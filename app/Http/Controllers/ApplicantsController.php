@@ -22,7 +22,7 @@ class ApplicantsController extends Controller
         //
         DB::beginTransaction();
         try{
-            $app = Applicants::with('work','ranks','qualifications')->get();
+            $app = Applicants::with('work','rank','qualifications')->get();
             if (!$app){
                 throw new NotFoundHttpException('Not data');
             }
@@ -133,7 +133,7 @@ class ApplicantsController extends Controller
         DB::beginTransaction();
         try{
 //            die($id);
-            $data = Applicants::where('ID_Applicants',$id)->with('work','ranks','qualifications')->get();
+            $data = Applicants::where('ID_Applicants',$id)->with('work','rank','qualifications')->get();
             if (!$data){
                 throw new NotFoundHttpException('not data');
             }
